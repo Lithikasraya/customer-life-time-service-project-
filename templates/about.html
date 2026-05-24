@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CLV Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app_styles.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            <li><a href="{{ url_for('help') }}">Help</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a href="{{ url_for('team') }}">Our Team</a></li>
+            <li><a href="https://github.com/Lithikasraya/customer-life-time-service-project-.git" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>About the CLV Prediction Project</h1>
+
+        <h2>What is Customer Lifetime Value (CLV)?</h2>
+        <p>Customer Lifetime Value (CLV) is a key metric used in business analytics to estimate the total revenue a business can expect from a customer throughout their relationship. It helps companies make strategic decisions regarding marketing, customer acquisition, and retention.</p>
+
+        <h2>How CLV is Calculated</h2>
+        <p>CLV is determined using the following formula:</p>
+        <p class="formula">CLV = Average Transaction Value × Purchase Frequency × Retention Period</p>
+
+        <ul>
+            <li><strong>Recency:</strong> Measures how recently a customer made a purchase.</li>
+            <li><strong>Frequency:</strong> Indicates how often a customer makes purchases.</li>
+            <li><strong>Monetary Value (Average Transaction Value):</strong> Represents the average amount spent per transaction.</li>
+            <li><strong>Retention Period:</strong> The expected duration a customer continues buying from the business.</li>
+        </ul>
+
+        <h2>Project Overview</h2>
+        <p>This CLV prediction system is built using Python, Flask, HTML, CSS, and machine learning. It allows users to:</p>
+
+        <ul>
+            <li>Upload customer transaction history.</li>
+            <li>Analyze past purchase behaviors.</li>
+            <li>Predict Customer Lifetime Value based on historical data.</li>
+            <li>Calculate CLV for both existing and new customers.</li>
+            <li>Display detailed insights through an interactive user interface.</li>
+        </ul>
+
+        <h2>How the Project Works</h2>
+        <ol>
+            <li><strong>Data Upload:</strong> Users upload a transaction dataset containing customer purchase records.</li>
+            <li><strong>Data Processing:</strong> The system cleans and preprocesses the data to extract relevant customer behavior metrics.</li>
+            <li><strong>CLV Calculation:</strong> The machine learning model predicts CLV based on the extracted features.</li>
+            <li><strong>Results Display:</strong> The predicted CLV values are displayed along with insights on customer behavior.</li>
+            <li><strong>New Customer Prediction:</strong> Users can input new customer details to estimate their potential CLV.</li>
+        </ol>
+    </div>
+</body>
+</html>

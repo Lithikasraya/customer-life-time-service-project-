@@ -1,0 +1,155 @@
+body {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+    background: linear-gradient(45deg, #E8D7F1, #D4E8F1, #E8F1D7, #F1E8D7);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite; /* Animate the gradient */
+    position: relative; /* For positioning bubbles */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    display: flex; /* Align navigation links in a row */
+    justify-content: center; /* Center the navigation links */
+    background-color: rgba(255, 255, 255, 0.9); /* Background for nav */
+    padding: 15px 20px; /* Padding around nav */
+    border-radius: 15px; /* Rounded corners */
+    position: absolute; /* Position it at the top */
+    top: 20px; /* Align to the top with some space */
+    width: 95%; /* Adjusted width */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+nav li {
+    margin: 0 20px; /* Space between links */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #6B7280; /* Muted gray link color */
+    font-weight: 500; /* Slightly bolder */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+    color: #A8C5D8; /* Change to muted blue on hover */
+}
+
+.container {
+    max-width: 600px;
+    max-height: 80vh; /* Limit height to allow scrolling */
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background for readability */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    overflow-y: auto; /* Allow vertical scrolling within the container */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    margin-top: 60px;
+}
+
+.container h1 {
+    color: #6B7280;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 8px auto;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    display: block;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #A8C5D8;
+    box-shadow: 0 0 0 3px rgba(168, 197, 216, 0.1);
+}
+
+button {
+    background-color: #A8C5D8;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7FA8C5;
+}
+
+p {
+    line-height: 1.6;
+    text-align: center;
+    color: #4B5563;
+}
+
+a {
+    color: #A8C5D8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #7FA8C5;
+    text-decoration: underline;
+}

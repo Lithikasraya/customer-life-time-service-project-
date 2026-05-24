@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Results</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <h1>Customer Segmentation Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer ID</th>
+                <th>Recency</th>
+                <th>Frequency</th>
+                <th>Revenue</th>
+                <th>Segment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in data %}
+            <tr>
+                <td>{{ customer.CustomerID }}</td>
+                <td>{{ customer.Recency }}</td>
+                <td>{{ customer.Frequency }}</td>
+                <td>{{ customer.Revenue }}</td>
+                <td>{{ customer.Segment }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
