@@ -31,19 +31,74 @@ This CLV prediction system helps businesses estimate the total revenue they can 
 1. Clone the repository:
 ```bash
 git clone https://github.com/Lithikasraya/customer-life-time-service-project-.git
+cd customer-life-time-service-project-
 ```
 
-2. Install dependencies:
+2. Create a virtual environment (optional but recommended):
 ```bash
-pip install flask pandas numpy scikit-learn
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Run the application:
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the application locally:
 ```bash
 python app.py
 ```
 
-4. Open your browser and navigate to: `http://127.0.0.1:5000`
+5. Open your browser and navigate to: `http://127.0.0.1:5000`
+
+## Deployment
+
+### Deploy to Google Cloud Platform (App Engine)
+
+1. Install Google Cloud SDK
+2. Initialize your project:
+```bash
+gcloud init
+gcloud auth application-default login
+```
+
+3. Deploy:
+```bash
+gcloud app deploy
+```
+
+### Deploy to Heroku
+
+1. Install Heroku CLI
+2. Login to Heroku:
+```bash
+heroku login
+```
+
+3. Create a new app:
+```bash
+heroku create your-app-name
+```
+
+4. Deploy:
+```bash
+git push heroku main
+```
+
+5. View your app:
+```bash
+heroku open
+```
+
+### Deploy to Other Platforms
+
+The application uses `gunicorn` as the WSGI server and includes configuration for:
+- **Procfile** - For Heroku deployment
+- **app.yaml** - For Google Cloud App Engine deployment
+- **requirements.txt** - All Python dependencies
+
+Ensure your deployment platform can run Python 3.9+ and install dependencies from `requirements.txt`.
 
 ## Project Structure
 

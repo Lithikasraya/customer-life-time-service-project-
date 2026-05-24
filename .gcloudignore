@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.DS_Store
+*.ipynb
+cltv colab.ipynb
+clv prediction.pptx
+last time.zip
+README.md
